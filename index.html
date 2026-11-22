@@ -49,7 +49,8 @@
   .rings2{display:flex;gap:10px;margin:14px 0 6px}
   .ringbox{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center}
   .ringbox .rlab{font-size:11.5px;letter-spacing:.18em;color:var(--muted);margin-top:9px}
-  .ringbox .ramt{font-size:14.5px;font-weight:800;font-variant-numeric:tabular-nums;margin-top:2px}
+  .ringbox .ramt{display:flex;flex-direction:column;align-items:center;font-variant-numeric:tabular-nums;margin-top:2px}
+  .ringbox .ramt .amt{font-size:29px;font-weight:800;line-height:1.15}
   .ringbox .ramt .tgt{font-size:11.5px;font-weight:400;color:var(--muted)}
   .main{font-size:26px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
   .sub{font-size:12.5px;color:var(--muted);margin-top:4px}
@@ -135,7 +136,7 @@
       <div>
         <div class="kicker">RESALE BOARD — 担当：ニッケル</div>
         <h1>物販 <span class="thin">ボード</span></h1>
-        <span class="bubble">10月は売上219万・純利83万で着地。11月は18日時点で90万、月末へ向けて追い上げ中です</span>
+        <span class="bubble">10月は売上219万・純利83万で着地。11月は21日時点で売上100万・純利41万、月末へ向けて追い上げ中です</span>
       </div>
     </div>
 
@@ -145,40 +146,40 @@
       <button data-v="tokei">時計</button>
     </div>
 
-    <div class="daylabel">今月（11月）の目標達成率 ・ 11/18時点</div>
+    <div class="daylabel">今月（11月）の目標達成率 ・ 11/21時点</div>
     <div class="rings2">
       <div class="ringbox">
         <div class="ring">
           <svg width="112" height="112" viewBox="0 0 104 104" aria-hidden="true">
             <defs><linearGradient id="gTeal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7bf0dd"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs>
             <circle class="track" cx="52" cy="52" r="34" fill="none" stroke-width="10"></circle>
-            <circle class="val" id="novSalesVal" cx="52" cy="52" r="34" stroke="url(#gTeal)" stroke-dashoffset="143.3"></circle>
+            <circle class="val" id="novSalesVal" cx="52" cy="52" r="34" stroke="url(#gTeal)" stroke-dashoffset="135.3"></circle>
           </svg>
-          <div class="center"><div class="pct" id="novSalesPct">32.9%</div><div class="cap">売上達成率</div></div>
+          <div class="center"><div class="pct" id="novSalesPct">36.6%</div><div class="cap">売上達成率</div></div>
         </div>
         <div class="rlab">売上</div>
-        <div class="ramt"><span id="novSalesAmt">¥900,272</span> <span class="tgt">／ 目標 ¥274万</span></div>
+        <div class="ramt"><span class="amt" id="novSalesAmt">¥1,003,742</span> <span class="tgt">／ 目標 ¥274万</span></div>
       </div>
       <div class="ringbox">
         <div class="ring gold">
           <svg width="112" height="112" viewBox="0 0 104 104" aria-hidden="true">
             <defs><linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3ddab"/><stop offset="1" stop-color="#b8860b"/></linearGradient></defs>
             <circle class="track" cx="52" cy="52" r="34" fill="none" stroke-width="10"></circle>
-            <circle class="val" id="novNetVal" cx="52" cy="52" r="34" stroke="url(#gGold)" stroke-dashoffset="135.6"></circle>
+            <circle class="val" id="novNetVal" cx="52" cy="52" r="34" stroke="url(#gGold)" stroke-dashoffset="126.4"></circle>
           </svg>
-          <div class="center"><div class="pct" id="novNetPct">36.5%</div><div class="cap">利益達成率</div></div>
+          <div class="center"><div class="pct" id="novNetPct">40.8%</div><div class="cap">利益達成率</div></div>
         </div>
         <div class="rlab">純利益</div>
-        <div class="ramt"><span id="novNetAmt">¥365,331</span> <span class="tgt">／ 目標 ¥100万</span></div>
+        <div class="ramt"><span class="amt" id="novNetAmt">¥408,407</span> <span class="tgt">／ 目標 ¥100万</span></div>
       </div>
     </div>
 
-    <div class="row"><span>11月の販売件数</span><b id="novCount">107件</b></div>
-    <div class="row"><span id="novRemainLabel">売上目標まで残り</span><b id="novRemain">¥1,839,728</b></div>
+    <div class="row"><span>11月の販売件数</span><b id="novCount">124件</b></div>
+    <div class="row"><span id="novRemainLabel">売上目標まで残り</span><b id="novRemain">¥1,736,258</b></div>
     <p class="note" id="novNote" style="display:none"></p>
 
-    <div class="daylabel" id="dayLabel">最新の記録日（2026/11/18）の売上</div>
-    <div class="day"><span class="amt" id="daySales">¥34,390</span> <small><span id="dayCount">6件</span> ／ 純利益 <span id="dayNet">¥12,576</span></small></div>
+    <div class="daylabel" id="dayLabel">最新の記録日（2026/11/21）の売上</div>
+    <div class="day"><span class="amt" id="daySales">¥98,570</span> <small><span id="dayCount">15件</span> ／ 純利益 <span id="dayNet">¥46,006</span></small></div>
   </div>
 
   <section class="glass">
@@ -186,15 +187,15 @@
 
     <div class="verdict">
       <div class="vbig">11月の目標は、正直届きません。<br>今月は「着地の最大化」に切り替えます。</div>
-      <p>売上目標¥274万まで残り <b>¥1,839,728</b>。残り12日で1日 <b>¥153,311</b> が必要ですが、11月の実績ペースは1日 <b>¥50,015</b>（18日で¥900,272）で、目標は今のペースの約3倍です。</p>
-      <p>10月のペース（1日売上¥70,517・9.0件）に戻せば、着地は約 <b>¥175万</b>（目標比 約64%）。利益の着地見込みは約 <b>¥68.7万</b>（100万ラインの約69%）です。</p>
+      <p>売上目標¥274万まで残り <b>¥1,736,258</b>。残り9日で1日 <b>¥192,918</b> が必要ですが、11月の実績ペースは1日 <b>¥47,797</b>（21日で¥1,003,742）で、目標は今のペースの約4倍です。</p>
+      <p>10月のペース（1日売上¥70,517・9.0件）に戻せば、着地は約 <b>¥164万</b>（目標比 約60%）。利益の着地見込みは約 <b>¥65万</b>（100万ラインの約65%）です。</p>
     </div>
 
     <div class="subhead">今週のノルマ（7日間・10月ペース基準）</div>
     <div class="row"><span>販売件数</span><b>63件（9件／日）</b></div>
     <div class="row"><span>売上</span><b>約 ¥490,000</b></div>
     <div class="row"><span>うち時計</span><b>10件以上</b></div>
-    <p class="note">最大の原因は件数不足です。11月は5.9件／日しか売れていません。時計は1件の利益が¥6,657で小物（¥2,526）の約2.6倍。時計10件で約¥6.7万の利益上積みになります。</p>
+    <p class="note">最大の原因は件数不足です。11月は5.9件／日しか売れていません。時計は1件の利益が¥6,657で小物（¥2,528）の約2.6倍。時計10件で約¥6.7万の利益上積みになります。</p>
 
     <div class="subhead">今週やること</div>
     <div class="acts">
@@ -217,11 +218,11 @@
     <div class="row"><span>計算の基準</span><b>2,086件 ÷ 月279件（10月の販売ペース）</b></div>
     <p class="note">利益より先に在庫を減らすのが先決。見るべきは「在庫件数と在庫金額が先月より減ったか」です。</p>
 
-    <div class="subhead">1件あたり利益と時計比率（11月・18日まで）</div>
+    <div class="subhead">1件あたり利益と時計比率（11月・21日まで）</div>
     <div class="cmp">
       <div>
         <div class="cl">小物 ・ 1件あたり純利益</div>
-        <div class="cv">¥2,526</div>
+        <div class="cv">¥2,528</div>
         <div class="cb k" style="width:38%"></div>
       </div>
       <div>
@@ -232,15 +233,15 @@
     </div>
     <p class="note" style="margin-top:8px">時計は小物の約2.6倍稼ぎます。</p>
     <div class="share">
-      <div class="sl"><span>件数の内訳（107件）</span><b>時計 21.5%（23件）</b></div>
-      <div class="segbar" role="img" aria-label="件数の内訳：小物78.5%、時計21.5%"><div class="k" style="width:78.5%"></div><div class="t" style="width:21.5%"></div></div>
+      <div class="sl"><span>件数の内訳（124件）</span><b>時計 18.5%（23件）</b></div>
+      <div class="segbar" role="img" aria-label="件数の内訳：小物81.5%、時計18.5%"><div class="k" style="width:81.5%"></div><div class="t" style="width:18.5%"></div></div>
     </div>
     <div class="share">
-      <div class="sl"><span>純利益の内訳（¥365,331）</span><b>時計 41.9%（¥153,124）</b></div>
-      <div class="segbar" role="img" aria-label="純利益の内訳：小物58.1%、時計41.9%"><div class="k" style="width:58.1%"></div><div class="t" style="width:41.9%"></div></div>
+      <div class="sl"><span>純利益の内訳（¥408,407）</span><b>時計 37.5%（¥153,124）</b></div>
+      <div class="segbar" role="img" aria-label="純利益の内訳：小物62.5%、時計37.5%"><div class="k" style="width:62.5%"></div><div class="t" style="width:37.5%"></div></div>
     </div>
     <div class="legend"><span><i class="ik"></i>小物</span><span><i class="it"></i>時計</span></div>
-    <p class="note">件数では2割強の時計が、純利益では4割超を生んでいます。</p>
+    <p class="note">件数では2割弱の時計が、純利益では4割弱を生んでいます。</p>
 
     <div class="subhead">営業利益（経費控除後）</div>
     <div class="placeholder">経費タブの入力が始まれば、ここに手残りの営業利益が出ます。</div>
@@ -261,7 +262,7 @@
         <div class="main" id="augNet">¥830,955</div>
         <div class="sub">10月の純利益（確定）</div>
         <div class="sub">10月売上 <b id="augSales">¥2,186,024</b> ・ <span id="augCount">279件</span></div>
-        <div class="sub">1件あたり利益 <b id="perItem">¥3,841</b><span id="perItemNote">（2026年累計）</span></div>
+        <div class="sub">1件あたり利益 <b id="perItem">¥3,831</b><span id="perItemNote">（2026年累計）</span></div>
       </div>
     </div>
     <div class="bar"><div id="barVal" style="width:79.8%"></div></div>
@@ -270,8 +271,8 @@
 
   <section class="glass">
     <h3>SUMMARY</h3>
-    <div class="row"><span id="ytdL1">2026年 累計売上</span><b id="ytdSales">¥19,107,404</b></div>
-    <div class="row"><span id="ytdL2">2026年 累計純利益 ／ 件数</span><b><span id="ytdNet">¥8,830,101</span> ／ <span id="ytdCount">2,299件</span></b></div>
+    <div class="row"><span id="ytdL1">2026年 累計売上</span><b id="ytdSales">¥19,210,874</b></div>
+    <div class="row"><span id="ytdL2">2026年 累計純利益 ／ 件数</span><b><span id="ytdNet">¥8,873,177</span> ／ <span id="ytdCount">2,316件</span></b></div>
     <div class="row"><span>2025年 年間（参考）</span><b id="y2025">売上 ¥13,788,159 ／ 純利益 ¥6,726,028</b></div>
     <div class="row"><span>在庫</span><b><span id="invCount">2,086件</span> ・ <span id="invValue">¥7,039,552</span></b></div>
     <div class="row"><span>在庫回転（10月販売件数 ÷ 在庫）</span><b id="invTurn">月 13.4%</b></div>
@@ -279,7 +280,7 @@
 
   <section class="glass">
     <h3>月別売上 2026（合計）</h3>
-    <div class="chart" role="img" aria-label="2026年の月別売上グラフ。1月147万円、2月134万円、3月148万円、4月116万円、5月205万円、6月224万円、7月213万円、8月177万円、9月239万円、10月219万円、11月は18日までで90万円">
+    <div class="chart" role="img" aria-label="2026年の月別売上グラフ。1月147万円、2月134万円、3月148万円、4月116万円、5月205万円、6月224万円、7月213万円、8月177万円、9月239万円、10月219万円、11月は21日までで100万円">
       <div class="col"><div class="v">147万</div><div class="b" style="height:62%"></div><div class="l">1月</div></div>
       <div class="col"><div class="v">134万</div><div class="b" style="height:56%"></div><div class="l">2月</div></div>
       <div class="col"><div class="v">148万</div><div class="b" style="height:62%"></div><div class="l">3月</div></div>
@@ -290,20 +291,20 @@
       <div class="col"><div class="v">177万</div><div class="b" style="height:74%"></div><div class="l">8月</div></div>
       <div class="col"><div class="v">239万</div><div class="b" style="height:100%"></div><div class="l">9月</div></div>
       <div class="col aug"><div class="v">219万</div><div class="b" style="height:92%"></div><div class="l">10月</div></div>
-      <div class="col partial"><div class="v">90万</div><div class="b" style="height:38%"></div><div class="l">11月*</div></div>
+      <div class="col partial"><div class="v">100万</div><div class="b" style="height:42%"></div><div class="l">11月*</div></div>
     </div>
-    <p class="note">*11月は11/18までの集計。10月（ティール）は先月（確定）です。</p>
+    <p class="note">*11月は11/21までの集計。10月（ティール）は先月（確定）です。</p>
   </section>
 
   <section class="glass">
     <h3>年間目標 2026（合計）</h3>
     <div class="tgt">
-      <div class="lab"><span>売上 <b>¥19,107,404</b> ／ 目標 ¥35,000,000</span><span class="pct">54.6%</span></div>
-      <div class="bar"><div style="width:54.6%"></div></div>
+      <div class="lab"><span>売上 <b>¥19,210,874</b> ／ 目標 ¥35,000,000</span><span class="pct">54.9%</span></div>
+      <div class="bar"><div style="width:54.9%"></div></div>
     </div>
     <div class="tgt">
-      <div class="lab"><span>純利益 <b>¥8,830,101</b> ／ 目標 ¥15,000,000</span><span class="pct">58.9%</span></div>
-      <div class="bar"><div style="width:58.9%"></div></div>
+      <div class="lab"><span>純利益 <b>¥8,873,177</b> ／ 目標 ¥15,000,000</span><span class="pct">59.2%</span></div>
+      <div class="bar"><div style="width:59.2%"></div></div>
     </div>
     <div class="months" aria-label="月別売上目標（前年の月別実績で配分）">
       <div><div class="m">1月</div><div class="t">430万</div></div>
@@ -324,7 +325,7 @@
 
   <section class="glass">
     <h3>NOTE</h3>
-    <p class="note" style="margin-top:0">数字は蘭ちゃんの最新台帳（2026/11/18まで）を取り込んだ集計です。ブランド別の内訳は旧台帳に項目がないため集計できません。ブランド別・キャッシュフローの欄は、データ移行後に追加します。</p>
+    <p class="note" style="margin-top:0">数字は蘭ちゃんの台帳（2026/11/18まで）と、新しい物販台帳への自動記録分（11/21まで）を合わせた集計です。ブランド別の内訳は旧台帳に項目がないため集計できません。ブランド別・キャッシュフローの欄は、データ移行後に追加します。</p>
   </section>
 
 </div>
@@ -332,23 +333,23 @@
   var C = 213.6;
   var REFNOTE = "※小物・時計に個別の目標はないため、達成率は合計の目標に対する参考値です。";
   var DATA = {
-    total: {dayLabel:"最新の記録日（2026/11/18）の売上",
-      novSalesRing:32.9, novSalesAmt:"¥900,272", novNetRing:36.5, novNetAmt:"¥365,331",
-      novCount:"107件", novRemainLabel:"売上目標まで残り", novRemain:"¥1,839,728", novNote:"",
-      ring:83.1, augNet:"¥830,955", augSales:"¥2,186,024", augCount:"279件", perItem:"¥3,841", perItemNote:"（2026年累計）",
+    total: {dayLabel:"最新の記録日（2026/11/21）の売上",
+      novSalesRing:36.6, novSalesAmt:"¥1,003,742", novNetRing:40.8, novNetAmt:"¥408,407",
+      novCount:"124件", novRemainLabel:"売上目標まで残り", novRemain:"¥1,736,258", novNote:"",
+      ring:83.1, augNet:"¥830,955", augSales:"¥2,186,024", augCount:"279件", perItem:"¥3,831", perItemNote:"（2026年累計）",
       bar:79.8, barLabel:"10月売上 ／ 月目標 ¥2,740,000（前年の月別配分）", barPct:"79.8%",
-      ytdL1:"2026年 累計売上", ytdSales:"¥19,107,404", ytdL2:"2026年 累計純利益 ／ 件数", ytdNet:"¥8,830,101", ytdCount:"2,299件",
+      ytdL1:"2026年 累計売上", ytdSales:"¥19,210,874", ytdL2:"2026年 累計純利益 ／ 件数", ytdNet:"¥8,873,177", ytdCount:"2,316件",
       y2025:"売上 ¥13,788,159 ／ 純利益 ¥6,726,028", invCount:"2,086件", invValue:"¥7,039,552", invTurn:"月 13.4%"},
-    komono: {dayLabel:"最新の記録日（2026/11/18）の売上（合計）",
-      novSalesRing:20.3, novSalesAmt:"¥555,700", novNetRing:21.2, novNetAmt:"¥212,207",
-      novCount:"84件", novRemainLabel:"売上目標まで残り（合計）", novRemain:"¥1,839,728", novNote:REFNOTE,
+    komono: {dayLabel:"最新の記録日（2026/11/21）の売上（合計）",
+      novSalesRing:24.1, novSalesAmt:"¥659,170", novNetRing:25.5, novNetAmt:"¥255,283",
+      novCount:"101件", novRemainLabel:"売上目標まで残り（合計）", novRemain:"¥1,736,258", novNote:REFNOTE,
       ring:61.1, augNet:"¥610,533", augSales:"¥1,647,940", augCount:"252件", perItem:"¥2,423", perItemNote:"（10月）",
       bar:75.4, barLabel:"10月売上の構成比（小物）", barPct:"75.4%",
       ytdL1:"2026年 累計売上（合計）", ytdSales:"¥19,107,404", ytdL2:"2026年 累計純利益 ／ 件数（合計）", ytdNet:"¥8,830,101", ytdCount:"2,299件",
       y2025:"売上 ¥9,877,530 ／ 純利益 ¥4,664,978", invCount:"1,854件", invValue:"―", invTurn:"月 13.6%"},
-    tokei: {dayLabel:"最新の記録日（2026/11/18）の売上（合計）",
+    tokei: {dayLabel:"最新の記録日（2026/11/21）の売上（合計）",
       novSalesRing:12.6, novSalesAmt:"¥344,572", novNetRing:15.3, novNetAmt:"¥153,124",
-      novCount:"23件", novRemainLabel:"売上目標まで残り（合計）", novRemain:"¥1,839,728", novNote:REFNOTE,
+      novCount:"23件", novRemainLabel:"売上目標まで残り（合計）", novRemain:"¥1,736,258", novNote:REFNOTE,
       ring:22.0, augNet:"¥220,422", augSales:"¥538,084", augCount:"27件", perItem:"¥8,164", perItemNote:"（10月）",
       bar:24.6, barLabel:"10月売上の構成比（時計）", barPct:"24.6%",
       ytdL1:"2026年 累計売上（合計）", ytdSales:"¥19,107,404", ytdL2:"2026年 累計純利益 ／ 件数（合計）", ytdNet:"¥8,830,101", ytdCount:"2,299件",
